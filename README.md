@@ -1,7 +1,7 @@
 # MAL-Bot
-COMMANDS
-Bot command prefix = mal.
-Example: mal.anime Attack on Titan
+COMMANDS\n
+Bot command prefix = mal.\n
+Example: mal.anime Attack on Titan\n
 
 <Random>
 cats = Print a random cat fact. (Made this to learn the very basics of API)
