@@ -20,7 +20,7 @@ async def on_ready():
     print('| BOT IS READY')
     print('|--------------------------------------------------------')
     print('| MyAnimeList (MAL) Companion Bot')
-    print('| MADE BY: lucasssssss#0420')
+    print('| MADE BY: lucasssssss#0001')
     print('| DESCRIPTION:')
     print('| Companion bot made to interact with MAL API to find ')
     print('| anime, manga, characters, etc. Also features user ')
