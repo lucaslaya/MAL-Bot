@@ -13,8 +13,8 @@ import asyncio
 from typing import Union
 from datetime import datetime
 
-CLIENT_ID = 'YOUR MAL CLIENT ID'
-CLIENT_SECRET = 'YOUR MAL CLIENT SECRET'
+CLIENT_ID = 'YOUR CLIENT ID'
+CLIENT_SECRET = 'YOUR CLIENT SECRET'
 
 current_season = int(datetime.now().month)
 current_year = int(datetime.now().year)
@@ -154,8 +154,7 @@ class searchcogs(commands.Cog):
         await search_options.add_reaction(search_emojis[3])
         await search_options.add_reaction(search_emojis[4])
 
-        def check(r: discord.Reaction,
-                  u: Union[discord.Member, discord.User]):  # r = discord.Reaction, u = discord.Member or discord.User.
+        def check(r: discord.Reaction, u: Union[discord.Member, discord.User]):  # r = discord.Reaction, u = discord.Member or discord.User.
             return u.id == ctx.author.id and r.message.channel.id == ctx.channel.id and str(r.emoji) in search_emojis
 
         try:
@@ -233,23 +232,34 @@ class searchcogs(commands.Cog):
         page = 0
         selected_id = 0
 
-        seasonal_anime = await ctx.send('```Seasonal Anime\nSelect an option by reacting to the message:\n\n1. {name1}\n2. {name2}\n3. {name3}\n4. {name4}\n5. {name5}```'.format(
-                name1=season_info['data'][0+page]['node']['title'],
-                name2=season_info['data'][1+page]['node']['title'],
-                name3=season_info['data'][2+page]['node']['title'],
-                name4=season_info['data'][3+page]['node']['title'],
-                name5=season_info['data'][4+page]['node']['title']
+        seasonal_anime = await ctx.send('```Seasonal Anime {season} {year}\nSelect an option by reacting to the message:\n\n1. {name1}\n2. {name2}\n3. {name3}\n4. {name4}\n5. {name5}\n6. {name6}\n7. {name7}\n8. {name8}\n9. {name9}\n10. {name10}```'.format(
+                season=season,
+                year=year,
+                name1=season_info['data'][0]['node']['title'],
+                name2=season_info['data'][1]['node']['title'],
+                name3=season_info['data'][2]['node']['title'],
+                name4=season_info['data'][3]['node']['title'],
+                name5=season_info['data'][4]['node']['title'],
+                name6=season_info['data'][5]['node']['title'],
+                name7=season_info['data'][6]['node']['title'],
+                name8=season_info['data'][7]['node']['title'],
+                name9=season_info['data'][8]['node']['title'],
+                name10=season_info['data'][9]['node']['title']
             ))
 
-        search_emojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
+        search_emojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
         await seasonal_anime.add_reaction(search_emojis[0])
         await seasonal_anime.add_reaction(search_emojis[1])
         await seasonal_anime.add_reaction(search_emojis[2])
         await seasonal_anime.add_reaction(search_emojis[3])
         await seasonal_anime.add_reaction(search_emojis[4])
+        await seasonal_anime.add_reaction(search_emojis[5])
+        await seasonal_anime.add_reaction(search_emojis[6])
+        await seasonal_anime.add_reaction(search_emojis[7])
+        await seasonal_anime.add_reaction(search_emojis[8])
+        await seasonal_anime.add_reaction(search_emojis[9])
 
-        def check(r: discord.Reaction,
-                  u: Union[discord.Member, discord.User]):  # r = discord.Reaction, u = discord.Member or discord.User.
+        def check(r: discord.Reaction, u: Union[discord.Member, discord.User]):  # r = discord.Reaction, u = discord.Member or discord.User.
             return u.id == ctx.author.id and r.message.channel.id == ctx.channel.id and str(r.emoji) in search_emojis
 
         try:
@@ -269,6 +279,16 @@ class searchcogs(commands.Cog):
                 selected_id = 3
             if str(reaction.emoji) == search_emojis[4]:
                 selected_id = 4
+            if str(reaction.emoji) == search_emojis[5]:
+                selected_id = 5
+            if str(reaction.emoji) == search_emojis[6]:
+                selected_id = 6
+            if str(reaction.emoji) == search_emojis[7]:
+                selected_id = 7
+            if str(reaction.emoji) == search_emojis[8]:
+                selected_id = 8
+            if str(reaction.emoji) == search_emojis[9]:
+                selected_id = 9
 
         await ctx.channel.purge(limit=1)
 
