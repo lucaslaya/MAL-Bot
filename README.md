@@ -13,6 +13,43 @@ coinflip = Flip a coin <br />
 anime [title] = Search MAL for anime and display the info <br />
 manga [title] = Search MAL for manga and display the info <br />
 
+season [season (default is current)] [year (default is current)] = Shows the seasonal anime for the selected season. <br />
+Format for seasons is: <br />
+ - winter <br />
+ - spring <br />
+ - summer <br />
+ - fall <br />
+
+Example: mal.season spring 2019
+
+animerank [type (default is all)] = Displays the top anime in the order selected. Type means the how the anime are ranked.
+Format for rank types is:
+ - all = Top anime series
+ - airing = Top airing series
+ - upcoming = Top upcoming series
+ - tv = Top anime TV series
+ - ova = Top anime OVA series
+ - movie = Top anime movies
+ - special = Top anime specials
+ - bypopularity = Top anime by popularity
+ - favorite = Top favorited anime
+
+Example: mal.animerank bypopularity
+
+mangarank [type (default is all)] = Displays the top manga in the order selected. Type means how the manga are ranked.
+Format for rank types is:
+ - all = All
+ - manga = Top manga
+ - novels = Top novels
+ - oneshots = Top one-shots
+ - doujin = Top doujinshi
+ - manhwa = Top manhwa
+ - manhua = Top manhua
+ - bypopularity = Most popular
+ - favorite = Most favorited
+
+Example: mal.mangarank manhua
+
 #### Logistical 
 ping = Check bot response time <br />
 botinfo (Not yet enabled) = Display information about the bot <br />
