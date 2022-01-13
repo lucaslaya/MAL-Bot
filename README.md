@@ -20,9 +20,9 @@ Format for seasons is: <br />
  - summer <br />
  - fall <br />
 
-Example: mal.season spring 2019
+Example: mal.season spring 2019 <br />
 
-animerank [type (default is all)] = Displays the top anime in the order selected. Type means the how the anime are ranked.
+animerank [type (default is all)] = Displays the top anime in the order selected. Type means the how the anime are ranked. <br />
 Format for rank types is:
  - all = Top anime series
  - airing = Top airing series
@@ -34,9 +34,9 @@ Format for rank types is:
  - bypopularity = Top anime by popularity
  - favorite = Top favorited anime
 
-Example: mal.animerank bypopularity
+Example: mal.animerank bypopularity <br />
 
-mangarank [type (default is all)] = Displays the top manga in the order selected. Type means how the manga are ranked.
+mangarank [type (default is all)] = Displays the top manga in the order selected. Type means how the manga are ranked. <br />
 Format for rank types is:
  - all = All
  - manga = Top manga
@@ -48,7 +48,7 @@ Format for rank types is:
  - bypopularity = Most popular
  - favorite = Most favorited
 
-Example: mal.mangarank manhua
+Example: mal.mangarank manhua <br />
 
 #### Logistical 
 ping = Check bot response time <br />
