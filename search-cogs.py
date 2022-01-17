@@ -8,6 +8,7 @@
 #       - current settings give 10 anime per JSON request, could extend the options in discord (current = 5) or have to figure out the accurate offsets to cycle pages properly
 # - season: change the embed to feature airing times of the show
 # - (low priority) anime, manga, season: change the format of the status of the show (finished_airing = Finished Airing)
+# - (low priority) all: change output embed to show the title, not only en/ja titles
 
 #POSSIBLE ERRORS:
 # - season: might have to change system for changing pages as there may be a limit to the amount of pages there are
@@ -729,10 +730,6 @@ class searchcogs(commands.Cog):
     async def mangarank_error(self, error, ctx):
         print(f'⚠ An error ({error}) has occured while {error.author} used the MANGARANK command in {error.channel.name}.')
         await error.send('An error has occured while running the MANGARANK command. Please use mal.help to see the proper formatting for this command.')
-
-    @commands.command()
-    async def test(self, ctx):
-        await ctx.send('')
 
 def setup(bot):
     bot.add_cog(searchcogs(bot))
