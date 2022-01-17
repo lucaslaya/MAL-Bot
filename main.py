@@ -1,3 +1,5 @@
+#todo - user manga/anime list update, get user information
+
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -16,6 +18,8 @@ async def on_ready():
     print('| help-cogs:                    LOADED')
     bot.load_extension("search-cogs")
     print('| search-cogs:                  LOADED')
+    bot.load_extension("user-cogs")
+    print('| user-cogs:                    LOADED')
     print('|--------------------------------------------------------')
     print('| BOT IS READY')
     print('|--------------------------------------------------------')
@@ -34,4 +38,4 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send('Pong! {0}ms'.format(round(bot.latency * 1000)))
 
-bot.run("YOUR DISCORD BOT TOKEN")
+bot.run("Your Bot Token Here")
