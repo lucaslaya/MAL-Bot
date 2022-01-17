@@ -1,4 +1,4 @@
-#Catfacts, coinflip, 8ball
+#Catfacts, coinflip, bye
 
 import discord
 from discord.ext import commands
@@ -39,6 +39,12 @@ class randomcogs(commands.Cog):
     async def coinflip_error(self, error, ctx):
         print(
             f'⚠ An error ({error}) has occured while {error.author} used the COINFLIP command in {error.channel.name}.')
+
+    @commands.command()
+    async def bye(self, ctx):
+        with open('bye_gif.gif', 'rb') as f:
+            picture = discord.File(f)
+            await ctx.send(file=picture)
 
 def setup(bot):
     bot.add_cog(randomcogs(bot))
